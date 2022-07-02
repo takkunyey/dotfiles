@@ -1,0 +1,5 @@
+.idea/
+.metals/
+.DS_Store
+tags
+.bloop/

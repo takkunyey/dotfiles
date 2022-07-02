@@ -1,0 +1,16 @@
+set clipboard=unnamed
+set incsearch hlsearch
+set ignorecase smartcase
+set nrformats=
+
+set commentary
+set exchange
+set argtextobj
+set ideajoin
+set multiple-cursors
+set surround
+
+nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
+
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
