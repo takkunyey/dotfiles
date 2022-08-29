@@ -1,3 +1,6 @@
+alias vi='nvim'
+alias vim='nvim'
+
 alias mkdir='mkdir -p'
 
 alias sudo='sudo '
