@@ -5,7 +5,6 @@ require("packer").startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("tpope/vim-surround")
 	use("tpope/vim-repeat")
-	use("sheerun/vim-polyglot")
 	use("mechatroner/rainbow_csv")
 	use("junegunn/goyo.vim")
 	use("andymass/vim-matchup")
@@ -24,7 +23,7 @@ require("packer").startup(function(use)
 	use({
 		"folke/which-key.nvim",
 		config = function()
-			require('pluginconfig/which-key')
+			require("pluginconfig/which-key")
 		end,
 	})
 
@@ -43,14 +42,23 @@ require("packer").startup(function(use)
 	use({
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
-			require('pluginconfig/mason-lsconfig')
+			require("pluginconfig/mason-lsconfig")
 		end,
 	})
+
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("pluginconfig/null-ls")
+		end,
+	})
+
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+		config = function()
+			require("pluginconfig/nvim-treesitter")
 		end,
 	})
 

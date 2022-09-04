@@ -8,6 +8,7 @@ require("mason-lspconfig").setup_handlers({
 			--   vim.cmd 'autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 1000)'
 			-- end,
 			capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+      on_attach = require("pluginconfig/nvim-lspconfig").on_attach
 		}
 		require("lspconfig")[server].setup(opt)
 	end,
