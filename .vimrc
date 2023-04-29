@@ -1,10 +1,5 @@
-augroup vimrc
-  autocmd!
-augroup END
-
 " --------- general settings ---------
 filetype plugin indent on
-set timeoutlen=1000 ttimeoutlen=0
 set fileencoding=utf-8 encoding=utf-8 fileformat=unix
 set ambiwidth=double
 set clipboard=unnamed
@@ -29,13 +24,9 @@ set smartindent autoindent
 set showmatch matchtime=1
 set undolevels=100
 set scrolloff=3
-set mouse=n
 
 " ----------- key mapping --------- 
 let g:mapleader = "\<Space>"
-
-nnoremap j gj
-nnoremap k gk
 
 noremap <C-J> :bnext<CR>
 noremap <C-K> :bprev<CR>
@@ -54,12 +45,32 @@ cnoremap <C-d> <Del>
 cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 
-" move line up and down
-vnoremap <C-j> :m'>+<CR>gv=gv
-vnoremap <C-k> :m-2<CR>gv=gv
-
 " --------- plugin settings ---------
+call plug#begin()
 
-if filereadable(expand('$HOME/dotfiles/vim/plugins.vim'))
-  source $HOME/dotfiles/vim/plugins.vim
-endif
+Plug 'tpope/vim-surround'
+Plug 'junegunn/vim-easy-align', { 'for': 'markdown' }
+
+let g:polyglot_disabled = ['markdown', 'csv', 'javascript']
+Plug 'sheerun/vim-polyglot'
+Plug 'mechatroner/rainbow_csv', { 'for': 'csv' }
+
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
+" junegunn/vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" junegunn/fzf
+nnoremap <Leader>f :FZF<CR>
+nnoremap <Leader>r :Rg 
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>w :Windows<CR>
+nnoremap <Leader>h :History<CR>
