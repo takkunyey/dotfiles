@@ -1,10 +1,16 @@
 env:
   TERM: alacritty
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
 font:
   size: 14.0
 key_bindings:
-  - { key: Semicolon,    mods: Command|Shift,     action: IncreaseFontSize               }
-  - { key: Minus,        mods: Command|Shift,     action: DecreaseFontSize               }
+  - {key: Semicolon, mods: Command|Shift, action: IncreaseFontSize}
+  - {key: Minus, mods: Command|Shift, action: DecreaseFontSize}
 window:
   opacity: 0.8
 import:
