@@ -40,9 +40,6 @@ nnoremap k gk
 noremap <C-J> :bnext<CR>
 noremap <C-K> :bprev<CR>
 
-" avoid overwriting register when paste text at visual mode
-xnoremap <expr> p 'pgv"'.v:register.'y`>'
-
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 
 cnoremap w!! w !sudo tee > /dev/null %
