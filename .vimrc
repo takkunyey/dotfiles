@@ -13,6 +13,8 @@ set laststatus=2
 set ignorecase smartcase
 set nrformats= " disable nrformats=octal,hex
 set incsearch hlsearch
+hi Search ctermbg=Cyan
+hi Search ctermfg=Black
 set completeopt=menuone,preview pumheight=10
 set wrap display=lastline
 set backspace=eol,indent,start
