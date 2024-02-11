@@ -2,9 +2,6 @@ export LANG=en_US.UTF-8
 
 export PATH=/usr/local/bin:$PATH
 
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_CACHE_HOME=$HOME/.cache
-
 export DOTFILES_PATH=$HOME/dotfiles
 
 
@@ -40,7 +37,7 @@ zstyle ':completion:*' verbose yes
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook && add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-default true
 zstyle ':chpwd:*' recent-dirs-max 1000
-zstyle ':chpwd:*' recent-dirs-file "$XDG_CACHE_HOME/chpwd-recent-dirs"
+zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/chpwd-recent-dirs"
 
 
 source $DOTFILES_PATH/zsh/prefer-gnu.zsh
