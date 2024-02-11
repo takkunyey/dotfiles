@@ -30,8 +30,8 @@ set scrolloff=3
 " ----------- key mapping --------- 
 let g:mapleader = "\<Space>"
 
-noremap <C-J> :bnext<CR>
-noremap <C-K> :bprev<CR>
+noremap ]b :bnext<CR>
+noremap [b :bprev<CR>
 
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 
@@ -51,7 +51,6 @@ cnoremap <Esc>f <S-Right>
 call plug#begin()
 
 Plug 'tpope/vim-surround'
-Plug 'junegunn/vim-easy-align', { 'for': 'markdown' }
 
 let g:polyglot_disabled = ['markdown', 'csv', 'javascript']
 Plug 'sheerun/vim-polyglot'
@@ -64,15 +63,9 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-" junegunn/vim-easy-align
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
-
 " junegunn/fzf
 nnoremap <Leader>f :FZF<CR>
-nnoremap <Leader>r :Rg 
+nnoremap <Leader>r :Rg<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>w :Windows<CR>
 nnoremap <Leader>h :History<CR>
