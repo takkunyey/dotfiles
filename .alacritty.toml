@@ -19,6 +19,6 @@ args = ["-l", "-c", "tmux attach || tmux"]
 program = "/bin/zsh"
 
 [window]
-opacity = 0.9
+opacity = 1.0
 
 
