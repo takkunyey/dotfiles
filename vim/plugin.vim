@@ -50,3 +50,7 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+" mattn/vim-lsp-settings
+let g:lsp_settings = {}
+let g:lsp_settings['efm-langserver'] = {'disabled': v:false}
