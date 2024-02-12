@@ -48,6 +48,4 @@ cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 
 " --------- plugin settings ---------
-if filereadable(expand('./vim/plugin.vim'))
-  source ./vim/plugin.vim
-endif
+source ~/dotfiles/vim/plugin.vim
