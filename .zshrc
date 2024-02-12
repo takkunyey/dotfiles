@@ -40,7 +40,6 @@ zstyle ':chpwd:*' recent-dirs-max 1000
 zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/chpwd-recent-dirs"
 
 
-source $DOTFILES_PATH/zsh/prefer-gnu.zsh
 source $DOTFILES_PATH/zsh/line-editor.zsh
 source $DOTFILES_PATH/zsh/appearance.zsh
 source $DOTFILES_PATH/zsh/incremental-search.zsh
