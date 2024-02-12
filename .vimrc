@@ -48,24 +48,6 @@ cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 
 " --------- plugin settings ---------
-call plug#begin()
-
-Plug 'tpope/vim-surround'
-
-let g:polyglot_disabled = ['markdown', 'csv', 'javascript']
-Plug 'sheerun/vim-polyglot'
-Plug 'mechatroner/rainbow_csv', { 'for': 'csv' }
-
-Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-call plug#end()
-
-" junegunn/fzf
-nnoremap <Leader>f :FZF<CR>
-nnoremap <Leader>r :Rg<CR>
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>w :Windows<CR>
-nnoremap <Leader>h :History<CR>
+if filereadable(expand('./vim/plugin.vim'))
+  source ./vim/plugin.vim
+endif
